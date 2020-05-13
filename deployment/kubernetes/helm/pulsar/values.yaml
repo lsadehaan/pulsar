@@ -294,7 +294,7 @@ zookeeper:
     persistence: true
     data:
       name: data
-      size: 20Gi
+      size: 2Gi
       local_storage: true
       ## If you already have an existent storage class and want to reuse it, you can specify its name with the option below
       ##
@@ -362,7 +362,7 @@ bookkeeper:
       # requests:
         # memory: 4Gi
         # cpu: 2
-  replicaCount: 4
+  replicaCount: 3
   updateStrategy:
     type: RollingUpdate
   podManagementPolicy: Parallel
@@ -401,7 +401,7 @@ bookkeeper:
     persistence: true
     journal:
       name: journal
-      size: 10Gi
+      size: 4Gi
       local_storage: true
       ## If you already have an existent storage class and want to reuse it, you can specify its name with the option below
       ##
@@ -416,7 +416,7 @@ bookkeeper:
         # provisioner: kubernetes.io/gce-pd
     ledgers:
       name: ledgers
-      size: 50Gi
+      size: 5Gi
       local_storage: true
       ## If you already have an existent storage class and want to reuse it, you can specify its name with the option below
       ##
@@ -800,7 +800,7 @@ prometheus:
     persistence: true
     data:
       name: data
-      size: 10Gi
+      size: 5Gi
       local_storage: true
       ## If you already have an existent storage class and want to reuse it, you can specify its name with the option below
       ##
