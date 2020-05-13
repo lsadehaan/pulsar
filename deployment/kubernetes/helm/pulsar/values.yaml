@@ -853,10 +853,8 @@ grafana:
       ingress.kubernetes.io/rewrite-target: /
     labels: {}
     name: grafana
-    tls: 
-      enabled: true
-    - hosts:
-      - grafana.csnet.info
+    tls:
+      enabled: true      
       secretName: grafana-tls
 
     ## Optional. Leave it blank if your Ingress Controller can provide a default certificate.
