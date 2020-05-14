@@ -39,3 +39,4 @@ spec:
     release: {{ .Release.Name }}
     component: {{ .Values.prometheus.component }}
 {{- end }}
+{{- end }}

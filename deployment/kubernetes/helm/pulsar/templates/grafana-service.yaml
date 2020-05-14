@@ -42,3 +42,4 @@ spec:
     component: {{ .Values.grafana.component }}
   sessionAffinity: None
 {{- end }}
+{{- end }}
