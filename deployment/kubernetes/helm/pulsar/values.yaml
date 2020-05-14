@@ -898,7 +898,6 @@ pulsar_manager:
   ## templates/pulsar-manager-service.yaml
   ##
   service:
-    enabled: false
     type: LoadBalancer
     annotations: {}
   ingress:
