@@ -688,9 +688,9 @@ proxy:
     https: 443
     pulsar: 6650
     pulsarssl: 6651
-  #service:
-  ##  annotations: {}
-  ##  type: LoadBalancer
+  service:
+    annotations: {}
+    type: LoadBalancer
   ## Proxy PodDisruptionBudget
   ## templates/proxy-pdb.yaml
   ##
@@ -838,9 +838,10 @@ grafana:
   ## Grafana service
   ## templates/grafana-service.yaml
   ##
-  #service:
-  ##  type: LoadBalancer
-  ##  annotations: {}
+  service:
+    enabled: false
+    type: LoadBalancer
+    annotations: {}
   plugins: []
   ## Grafana ingress
   ## templates/grafana-ingress.yaml
@@ -850,6 +851,7 @@ grafana:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       kubernetes.io/ingress.class: nginx
+      ingress.kubernetes.io/rewrite-target: /
     labels: {}
     name: grafana
     tls:
@@ -895,9 +897,9 @@ pulsar_manager:
   ## Pulsar manager service
   ## templates/pulsar-manager-service.yaml
   ##
-  #service:
-  ##  type: LoadBalancer
-  ##  annotations: {}
+  service:
+    type: LoadBalancer
+    annotations: {}
   ingress:
     enabled: true
     annotations: 
