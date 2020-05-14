@@ -839,7 +839,7 @@ grafana:
   ## templates/grafana-service.yaml
   ##
   service:
-    enabled: false
+    enabled: true
     type: LoadBalancer
     annotations: {}
   plugins: []
@@ -847,7 +847,7 @@ grafana:
   ## templates/grafana-ingress.yaml
   ##
   ingress:
-    enabled: true
+    enabled: false
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
       kubernetes.io/ingress.class: nginx
@@ -898,10 +898,11 @@ pulsar_manager:
   ## templates/pulsar-manager-service.yaml
   ##
   service:
+    enabled: true
     type: LoadBalancer
     annotations: {}
   ingress:
-    enabled: true
+    enabled: false
     annotations: 
       cert-manager.io/cluster-issuer: letsencrypt-prod
       kubernetes.io/ingress.class: nginx
